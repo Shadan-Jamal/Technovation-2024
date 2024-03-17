@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html{
+        font-family: "Kode Mono", monospace;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        scroll-behavior: smooth;
+    }
+    .default-text-color{
+        --tw-text-opacity: 1;
+    color: rgb(79 70 229 / var(--tw-text-opacity));
+    }
+  }
+  ::-webkit-scrollbar-track
+  {
+      border: 1px solid rgb(0, 0, 0);
+      background-color: #9193a6;
+  }
+  
+  ::-webkit-scrollbar
+  {
+      width: 10px;
+      background-color: #aaabb7;
+  }
+  
+  ::-webkit-scrollbar-thumb
+  {
+      background-color: #1f39ac;	
+  }
+  
+body{
+    background-image: url(/public/body.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 100vw 100%;
+    background-color: rgba(0, 0, 0, 0.748);
+    background-blend-mode: overlay;
+}
+#hero-section{
+    background-image: url("hero_section.jpg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.533);
+    background-blend-mode: overlay;
+    height: 100vh;
+}
+
+#events::-webkit-scrollbar{
+    display: none;
+}
