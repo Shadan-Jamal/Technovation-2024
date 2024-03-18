@@ -1,5 +1,5 @@
 var typed = new Typed('#hero-heading', {
-    strings: ['St. CLARET COLLEGE<br>PRESENTS', 'TECHNOVATION-2024<br>IT Fest'],
+    strings: ['<span class="text-red-600">ST. CLARET COLLEGE<br>PRESENTS</span>', 'TECHNOVATION-2024<br>IT Fest'],
     typeSpeed: 60,
-    backSpeed:30,
+    backSpeed:40,
 });
