@@ -44,25 +44,18 @@
   {
       background-color: #1f39ac;	
   }
-  
-/*body{
-    background-image: linear-gradient(to right top, #531957, #462863, #37336a, #273c6e, #18446f, #134873, #0b4c78, #00507c, #005288, #005394, #08549f, #2254a9);
-    background-repeat: repeat;
-    background-size: contain;
-    background-color: rgba(0, 0, 0, 0.451);
-    background-blend-mode: overlay;
-}*/
-#hero-section{
-    background-image: url("hero_section.jpg") ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.755);
-    background-blend-mode: overlay;
-    height: 100vh;
-}
 
 #events::-webkit-scrollbar{
     display: none;
+}
+
+body{
+    background-image: url(/public/desktop.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(9, 8, 36, 0.618);
+    background-blend-mode: overlay;
 }
 
 #desktop-image{
@@ -75,4 +68,20 @@
     position: sticky;
     top: 0;
     z-index: -1;
+}
+
+#events img{
+    border: none;
+    outline: none;
+    width:120px;
+    height: 130px;
+    object-fit: fill;
+    filter: opacity(0.4);
+    transition: all 200ms ease-in;
+}
+
+#events img:hover{
+    width:170px;
+    height: 190px;
+    filter: opacity(1);
 }
