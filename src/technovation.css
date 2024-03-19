@@ -73,15 +73,9 @@ body{
 #events img{
     border: none;
     outline: none;
-    width:120px;
-    height: 130px;
+    width:105px;
+    height: 100px;
     object-fit: fill;
     filter: opacity(0.4);
     transition: all 200ms ease-in;
-}
-
-#events img:hover{
-    width:170px;
-    height: 190px;
-    filter: opacity(1);
 }
