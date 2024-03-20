@@ -451,6 +451,7 @@ html{
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
 }
 
@@ -619,6 +620,10 @@ html{
   margin-right: auto;
 }
 
+.mb-10{
+  margin-bottom: 2.5rem;
+}
+
 .mb-12{
   margin-bottom: 3rem;
 }
@@ -633,6 +638,10 @@ html{
 
 .mb-4{
   margin-bottom: 1rem;
+}
+
+.mb-5{
+  margin-bottom: 1.25rem;
 }
 
 .mb-6{
@@ -677,10 +686,6 @@ html{
 
 .w-36{
   width: 9rem;
-}
-
-.w-44{
-  width: 11rem;
 }
 
 .w-80{
@@ -747,10 +752,6 @@ html{
   justify-content: center;
 }
 
-.justify-between{
-  justify-content: space-between;
-}
-
 .gap-3{
   gap: 0.75rem;
 }
@@ -777,10 +778,6 @@ html{
 
 .rounded-full{
   border-radius: 9999px;
-}
-
-.border{
-  border-width: 1px;
 }
 
 .border-x-4{
@@ -816,12 +813,21 @@ html{
   background-color: rgb(0 0 0 / 0.7);
 }
 
-.p-3{
-  padding: 0.75rem;
+.p-1{
+  padding: 0.25rem;
+}
+
+.py-10{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .pb-5{
   padding-bottom: 1.25rem;
+}
+
+.pt-11{
+  padding-top: 2.75rem;
 }
 
 .pt-8{
@@ -864,6 +870,16 @@ html{
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-bold{
@@ -961,7 +977,6 @@ body{
     place-items: center;
     max-width: 100vw;
     max-height: 40rem;
-    margin-left: 6rem;
     margin-bottom: 160px;
     border-left-width: 6px;
     --tw-border-opacity: 1;
