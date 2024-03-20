@@ -459,17 +459,17 @@ html{
   color: rgb(107 33 168 / var(--tw-text-opacity))
 }
 
-.default-event-container{
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  place-items: center;
-  max-width: 100vw;
-  max-height: 40rem;
-  margin-left: 8rem;
-  margin-bottom: 160px;
-  border-left-width: 6px;
+.default-event-container-mobile{
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
   --tw-border-opacity: 1;
-  border-left-color: rgb(88 28 135 / var(--tw-border-opacity));
+  border-left-color: rgb(88 28 135 / var(--tw-border-opacity))
 }
 
 *, ::before, ::after{
@@ -619,8 +619,20 @@ html{
   margin-right: auto;
 }
 
-.mb-28{
-  margin-bottom: 7rem;
+.mb-12{
+  margin-bottom: 3rem;
+}
+
+.mb-2{
+  margin-bottom: 0.5rem;
+}
+
+.mb-20{
+  margin-bottom: 5rem;
+}
+
+.mb-4{
+  margin-bottom: 1rem;
 }
 
 .mb-6{
@@ -629,10 +641,6 @@ html{
 
 .mb-7{
   margin-bottom: 1.75rem;
-}
-
-.mb-4{
-  margin-bottom: 1rem;
 }
 
 .inline{
@@ -647,8 +655,16 @@ html{
   height: 3.5rem;
 }
 
-.h-32{
-  height: 8rem;
+.h-36{
+  height: 9rem;
+}
+
+.h-44{
+  height: 11rem;
+}
+
+.h-72{
+  height: 18rem;
 }
 
 .h-full{
@@ -659,36 +675,20 @@ html{
   height: 100vh;
 }
 
-.h-2\/4{
-  height: 50%;
+.w-36{
+  width: 9rem;
 }
 
-.h-28{
-  height: 7rem;
+.w-44{
+  width: 11rem;
 }
 
-.h-2{
-  height: 0.5rem;
+.w-80{
+  width: 20rem;
 }
 
-.h-60{
-  height: 15rem;
-}
-
-.max-h-screen{
-  max-height: 100vh;
-}
-
-.min-h-screen{
-  min-height: 100vh;
-}
-
-.min-h-full{
-  min-height: 100%;
-}
-
-.w-52{
-  width: 13rem;
+.w-96{
+  width: 24rem;
 }
 
 .w-full{
@@ -699,16 +699,20 @@ html{
   width: 100vw;
 }
 
+.grow{
+  flex-grow: 1;
+}
+
 .basis-1\/2{
   flex-basis: 50%;
 }
 
-.basis-2\/3{
-  flex-basis: 66.666667%;
+.basis-10{
+  flex-basis: 2.5rem;
 }
 
-.basis-2\/5{
-  flex-basis: 40%;
+.basis-7{
+  flex-basis: 1.75rem;
 }
 
 .snap-y{
@@ -743,40 +747,24 @@ html{
   justify-content: center;
 }
 
-.justify-evenly{
-  justify-content: space-evenly;
-}
-
-.justify-items-center{
-  justify-items: center;
+.justify-between{
+  justify-content: space-between;
 }
 
 .gap-3{
   gap: 0.75rem;
 }
 
-.gap-4{
-  gap: 1rem;
+.gap-5{
+  gap: 1.25rem;
+}
+
+.place-self-center{
+  place-self: center;
 }
 
 .self-center{
   align-self: center;
-}
-
-.overflow-hidden{
-  overflow: hidden;
-}
-
-.overflow-scroll{
-  overflow: scroll;
-}
-
-.overflow-x-hidden{
-  overflow-x: hidden;
-}
-
-.overflow-y-scroll{
-  overflow-y: scroll;
 }
 
 .text-wrap{
@@ -787,12 +775,57 @@ html{
   border-radius: 0.25rem;
 }
 
+.rounded-full{
+  border-radius: 9999px;
+}
+
 .border{
   border-width: 1px;
 }
 
-.pt-3{
-  padding-top: 0.75rem;
+.border-x-4{
+  border-left-width: 4px;
+  border-right-width: 4px;
+}
+
+.border-r-2{
+  border-right-width: 2px;
+}
+
+.border-t-4{
+  border-top-width: 4px;
+}
+
+.border-x-purple-800{
+  --tw-border-opacity: 1;
+  border-left-color: rgb(107 33 168 / var(--tw-border-opacity));
+  border-right-color: rgb(107 33 168 / var(--tw-border-opacity));
+}
+
+.border-r-white{
+  --tw-border-opacity: 1;
+  border-right-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-t-purple-600{
+  --tw-border-opacity: 1;
+  border-top-color: rgb(147 51 234 / var(--tw-border-opacity));
+}
+
+.bg-black\/70{
+  background-color: rgb(0 0 0 / 0.7);
+}
+
+.p-3{
+  padding: 0.75rem;
+}
+
+.pb-5{
+  padding-bottom: 1.25rem;
+}
+
+.pt-8{
+  padding-top: 2rem;
 }
 
 .text-center{
@@ -803,13 +836,18 @@ html{
   text-align: end;
 }
 
-.text-5xl{
-  font-size: 3rem;
-  line-height: 1;
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
-.text-7xl{
-  font-size: 4.5rem;
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-5xl{
+  font-size: 3rem;
   line-height: 1;
 }
 
@@ -823,19 +861,9 @@ html{
   line-height: 1.75rem;
 }
 
-.text-xl{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .font-bold{
@@ -857,10 +885,6 @@ html{
 
 .underline{
   text-decoration-line: underline;
-}
-
-.no-underline{
-  text-decoration-line: none;
 }
 
 ::-webkit-scrollbar-track
@@ -889,14 +913,25 @@ body{
   background-size: 100% 100%;
   background-position: center;
   background-attachment: fixed;
-  background-color: rgba(9, 8, 36, 0.618);
+  background-color: rgba(0, 0, 0, 0.685);
   background-blend-mode: overlay;
+}
+
+@media screen and (min-width:1024px){
+  body{
+    background-image: url(/public/desktop.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.685);
+    background-blend-mode: overlay;
+  }
 }
 
 #desktop-image{
   background-image: url(/public/desktop.jpg);
   background-size: 100vw 100vh;
-  background-color: rgba(0, 0, 0, 0.549);
+  background-color: rgba(0, 0, 0, 0.893);
   background-blend-mode: overlay;
   width: 100%;
   height: 100vh;
@@ -905,17 +940,72 @@ body{
   z-index: -1;
 }
 
-#events img{
-  border: none;
-  outline: none;
-  width:105px;
-  height: 100px;
-  -o-object-fit: fill;
-     object-fit: fill;
-  filter: opacity(0.4);
-  transition: all 200ms ease-in;
+.images{
+  filter: opacity(0.7);
+}
+
+@media screen and (min-width:1024px){
+  #footer{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:default-event-container{
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    place-items: center;
+    max-width: 100vw;
+    max-height: 40rem;
+    margin-left: 6rem;
+    margin-bottom: 160px;
+    border-left-width: 6px;
+    --tw-border-opacity: 1;
+    border-left-color: rgb(88 28 135 / var(--tw-border-opacity));
+  }
 }
 
 .hover\:underline:hover{
   text-decoration-line: underline;
+}
+
+@media (min-width: 1024px){
+  .lg\:h-96{
+    height: 24rem;
+  }
+
+  .lg\:basis-2\/5{
+    flex-basis: 40%;
+  }
+
+  .lg\:flex-row{
+    flex-direction: row;
+  }
+
+  .lg\:justify-evenly{
+    justify-content: space-evenly;
+  }
+
+  .lg\:text-end{
+    text-align: end;
+  }
+
+  .lg\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .lg\:text-7xl{
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .lg\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
