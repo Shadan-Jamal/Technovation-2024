@@ -607,6 +607,14 @@ html{
   }
 }
 
+.sticky{
+  position: sticky;
+}
+
+.top-0{
+  top: 0px;
+}
+
 .col-span-2{
   grid-column: span 2 / span 2;
 }
@@ -716,16 +724,8 @@ html{
   flex-basis: 2.5rem;
 }
 
-.basis-7{
-  flex-basis: 1.75rem;
-}
-
-.snap-y{
-  scroll-snap-type: y var(--tw-scroll-snap-strictness);
-}
-
-.snap-center{
-  scroll-snap-align: center;
+.basis-5{
+  flex-basis: 1.25rem;
 }
 
 .list-decimal{
@@ -817,9 +817,19 @@ html{
   padding: 0.25rem;
 }
 
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .py-10{
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+
+.py-5{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .pb-5{
@@ -931,6 +941,7 @@ body{
   background-attachment: fixed;
   background-color: rgba(0, 0, 0, 0.685);
   background-blend-mode: overlay;
+  overflow-x: hidden;
 }
 
 @media screen and (min-width:1024px){
