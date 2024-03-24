@@ -9,18 +9,18 @@ const hero_heading=document.getElementById('hero-heading');
 const events=document.getElementById('events-nav');
 const navbar=document.getElementById('navbar');
 const btn_nav=document.getElementById('show-nav');
-console.log(btn_nav.classList);
-
+events.style.display='none';
 btn_nav.addEventListener('click',()=>{
-    btn_nav.style.transition= "transform .3s linear";
     if(!btn_nav.classList.contains('active')){
         btn_nav.style.width='0';
         btn_nav.classList.add('active');
-        navbar.appendChild(events);
+        navbar.insertBefore(events,navbar.children[1]);
+        events.style.display="block";
     }
     else{
         btn_nav.style.width='44px';
         btn_nav.classList.remove('active');
-        navbar.removeChild(events)
+        navbar.removeChild(events);
+        events.style.display="none";
     }
 });
