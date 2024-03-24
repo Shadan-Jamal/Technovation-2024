@@ -121,6 +121,10 @@ img{
     text-wrap: wrap;
 }
 
+#show-nav::before,#show-nav::after{
+    transition: transform 50ms linear;
+}
+
 #show-nav::before{
     content: "";
     position: absolute;
