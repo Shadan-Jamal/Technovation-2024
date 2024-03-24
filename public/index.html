@@ -14,7 +14,7 @@
                 <h1 id="hero-heading" class="inline font-bold text-end"></h1>
             </div>
 
-            <div class=" flex flex-col justify-center items-center gap-3 default-text-color font-extrabold self-center basis-5 lg:basis-0 text-lg lg:text-2xl h-full" id="events">
+            <div class="flex flex-col justify-center items-center gap-3 default-text-color font-extrabold self-center basis-5 lg:basis-0 text-lg lg:text-2xl h-full" id="events">
                     <a href="#it-manager">IT-Manager</a>
                     <a href="#coding">Coding</a>
                     <a href="#debate">Debate</a>
@@ -31,9 +31,9 @@
         </section>
 
         
-        <nav class="w-screen h-20 border flex flex-row justify-between items-center default-text-color text-3xl font-bold text-wrap px-10 sticky top-0" id="navbar">
-            <a href="" class="ml-5 mr-7 pl-4">Home</a>
-            <div class="default-text-color text-base" id="events-nav">
+        <nav class="w-screen h-0 flex flex-row justify-between items-center text-white font-bold text-wrap px-10 sticky z-50 bg-purple-700 invisible" id="navbar">
+            <a href="" class="pl-2 text-2xl w-fit">Home</a>
+            <div class="text-white text-sm flex flex-row justify-center items-center gap-4 mr-9" id="events-nav">
                 <a href="#it-manager">IT-Manager</a>
                 <a href="#coding">Coding</a>
                 <a href="#debate">Debate</a>
@@ -42,16 +42,16 @@
                 <a href="#data-vis">Data Visualization</a>
                 <a href="#gaming">Gaming</a>
                 <a href="#pic-speak">Pic Speaking</a>
-                <a href="#startup">Startup Idea Presentation</a>
+                <a href="#startup">Idea Presentation</a>
                 <a href="#logo-design">Logo Design</a>
-                <a href="#math-stat">Maths and Statistics</a>
+                <a href="#math-stat">Maths and Stat</a>
                 <a href="#fashion-walk">Fashion Walk</a>
             </div>
-            <button id="show-nav" class="w-8 h-1 relative bg-purple-800 rounded"></button>
+            <button id="show-nav" class="mr-6 w-8 h-1 relative bg-white rounded"></button>
         </nav>
         <!--Packages-->
         
-        <h1 class="w-screen text-4xl default-text-color text-center underline font-extrabold">Special Packages</h1>
+        <h1 class="w-screen text-4xl default-text-color text-center underline font-extrabold" id="package-heading">Special Packages</h1>
 
         <div id="packages" data-aos="fade-down" class="h-72 lg:h-96 flex flex-row justify-center items-center w-screen border-x-4 border-x-purple-800 mb-20 lg:text-2xl">
             <div class="px-5 flex flex-col justify-center items-center">
@@ -350,13 +350,14 @@
                 <div class="w-full h-14 text-center col-span-6">
                     <h1 class="default-text-color text-2xl lg:text-5xl font-bold" id="startup-heading" data-aos="fade-down" data-aos-duration="1000">Innovatia(Start-up Idea)</h1>
                 </div>
-                <div class="images h-full col-span-2 flex items-center pt-11" data-aos="fade-down" data-aos-duration="1000">
+
+                <div class="images h-fit col-span-1 flex items-center pt-11" data-aos="fade-down" data-aos-duration="1000">
                     <img src="/public/logos/startup.png" alt="IT-manager.jpg" class="w-36 lg:w-56 lg:h-56 h-36 rounded place-self-center">
-                    
                 </div>
-                <div class="event-rules col-span-2 w-96 px-5">
-                    <h3 class="default-text-color text-lg lg:text-xl font-semibold" data-aos="fade-down" data-aos-duration="1000">Rules:</h3>
-                    <ul class="text-white text-xs lg:text-sm lg:w-96 list-disc">
+
+                <div class="event-rules h-full col-span-2 px-5">
+                    <h3 class="default-text-color text-lg lg:text-base font-semibold" data-aos="fade-down" data-aos-duration="1000">Rules:</h3>
+                    <ul class="text-white text-xs lg:text-sm lg:w-96 list-disc grow grid grid-cols-1 place-content-center gap-6">
                         <li>Topic: The startup idea or paper presentation must be related to Information Technology or a relevant subfield such as artificial intelligence, cybersecurity, software development, etc.</li>
                         <li>Originality: Submissions must be original ideas or research work. Plagiarism will result in disqualification. </li>
                         <li>Presentation Time: Each team will be allotted a specific amount of time for their presentation followed by a Q&A session from the judges, i.e 5+2.</li>
@@ -366,7 +367,8 @@
                         <li>Tech Requirements: Teams must ensure that they have all necessary technical equipment (e.g., laptop) for their presentation.</li>
                     </ul>
                 </div>
-                <div class="event-details col-span-2" data-aos="fade-down" data-aos-duration="1000">
+
+                <div class="event-details col-span-1" data-aos="fade-down" data-aos-duration="1000">
                     <ol class="text-white text-wrap list-decimal mb-2 text-sm lg:text-base">
                         <h3 class="default-text-color text-lg">CO-ORDINATORS:</h3>
                         <li>HARSHINI. R - 8550029871</li>
