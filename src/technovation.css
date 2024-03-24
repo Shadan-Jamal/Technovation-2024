@@ -111,10 +111,6 @@ img{
     filter:drop-shadow(0px 0px 30px purple);   
 }
 
-#package-heading,#packages,#events-section{
-    z-index: -1;
-}
-
 #events-nav >a{
     width:  fit-content;
     height: 100%;
@@ -179,5 +175,5 @@ img{
 
 .down{
     top:0;
-    height: 5rem;
+    height: 4rem;
 }

@@ -28,7 +28,7 @@ btn_nav.addEventListener('click',()=>{
 
 window.addEventListener('scroll',()=>{
     let scrolled=window.scrollY;
-    if(scrolled > 750){
+    if(scrolled > 780){
         navbar.style.visibility="visible";
         navbar.classList.add('down');
     }
