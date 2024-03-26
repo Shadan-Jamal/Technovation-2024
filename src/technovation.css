@@ -118,7 +118,7 @@ img{
 }
 
 #show-nav::before,#show-nav::after{
-    transition: transform 50ms linear;
+    transition: transform 100ms linear;
 }
 
 #show-nav::before{
@@ -143,34 +143,74 @@ img{
     background-color:white;
 }
 
-.active#show-nav::before{
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: -40px;
-    width: 40px;
-    height: 4px;
-    margin: 9px 0px;
-    border-radius: 0.25rem;
-    background-color:white;
-    transform: rotate(45deg);
-}
-
-.active#show-nav::after{
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: -40px;
-    width: 40px;
-    height: 4px;
-    margin: 9px 0px;
-    border-radius: 0.25rem;
-    background-color:white;
-    transform: rotate(-45deg);
-}
-
 #navbar{
+    background: rgba(239, 15, 235, 0.262);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     transition: height .3s ease-in-out;
+}
+
+@media screen and (min-width:1024px) {
+    .active#show-nav::before{
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -40px;
+        width: 40px;
+        height: 4px;
+        margin: 9px 0px;
+        border-radius: 0.25rem;
+        background-color:white;
+        transform: rotate(45deg);
+    }
+    
+    .active#show-nav::after{
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -40px;
+        width: 40px;
+        height: 4px;
+        margin: 9px 0px;
+        border-radius: 0.25rem;
+        background-color:white;
+        transform: rotate(-45deg);
+    }
+
+    #events-nav{
+        animation: appear 250ms linear forwards;
+    }
+    
+    @keyframes appear {
+        0%{
+            transform: translateX(200px);
+        }
+        100%{
+            transform: translateX(0px);
+        }
+    }
+    
+}
+#events-mobile-nav{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+}
+
+#event-mobile-view{
+    background: rgba(239, 15, 235, 0.262);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 1s linear;
+}
+
+#event-mobile-view  a{
+    width: 100%;
 }
 
 .down{
