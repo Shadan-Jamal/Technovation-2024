@@ -622,16 +622,20 @@ html{
   position: relative;
 }
 
-.-right-80{
-  right: -20rem;
+.right-0{
+  right: 0px;
 }
 
 .top-16{
   top: 4rem;
 }
 
-.right-0{
-  right: 0px;
+.z-0{
+  z-index: 0;
+}
+
+.z-10{
+  z-index: 10;
 }
 
 .z-50{
@@ -667,6 +671,10 @@ html{
   margin-bottom: 5rem;
 }
 
+.mb-3{
+  margin-bottom: 0.75rem;
+}
+
 .mb-4{
   margin-bottom: 1rem;
 }
@@ -693,10 +701,6 @@ html{
 
 .mt-28{
   margin-top: 7rem;
-}
-
-.block{
-  display: block;
 }
 
 .inline{
@@ -735,10 +739,6 @@ html{
   height: 18rem;
 }
 
-.h-80{
-  height: 20rem;
-}
-
 .h-fit{
   height: -moz-fit-content;
   height: fit-content;
@@ -754,6 +754,10 @@ html{
 
 .w-36{
   width: 9rem;
+}
+
+.w-40{
+  width: 10rem;
 }
 
 .w-8{
@@ -869,6 +873,11 @@ html{
   border-radius: 9999px;
 }
 
+.rounded-b-lg{
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
 .border-x-4{
   border-left-width: 4px;
   border-right-width: 4px;
@@ -891,6 +900,14 @@ html{
 
 .bg-black\/70{
   background-color: rgb(0 0 0 / 0.7);
+}
+
+.bg-purple-500\/50{
+  background-color: rgb(168 85 247 / 0.5);
+}
+
+.bg-purple-500\/70{
+  background-color: rgb(168 85 247 / 0.7);
 }
 
 .bg-white{
@@ -925,6 +942,11 @@ html{
 .py-10{
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .py-5{
@@ -1017,6 +1039,12 @@ html{
   filter: none;
 }
 
+.backdrop-blur-sm{
+  --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
 ::-webkit-scrollbar-track
   {
   border: 1px solid rgb(0, 0, 0);
@@ -1057,18 +1085,6 @@ body{
     background-color: rgba(0, 0, 0, 0.685);
     background-blend-mode: overlay;
   }
-}
-
-#desktop-image{
-  background-image: url(/public/desktop.jpg);
-  background-size: 100vw 100vh;
-  background-color: rgba(0, 0, 0, 0.893);
-  background-blend-mode: overlay;
-  width: 100%;
-  height: 100vh;
-  position: sticky;
-  top: 0;
-  z-index: -1;
 }
 
 .images{
@@ -1122,41 +1138,33 @@ img{
   background-color:white;
 }
 
-#navbar{
-  background: rgba(239, 15, 235, 0.262);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  transition: height .3s ease-in-out;
+.active#show-nav::before{
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -40px;
+  width: 40px;
+  height: 4px;
+  margin: 9px 0px;
+  border-radius: 0.25rem;
+  background-color:white;
+  transform: rotate(45deg);
+}
+
+.active#show-nav::after{
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -40px;
+  width: 40px;
+  height: 4px;
+  margin: 9px 0px;
+  border-radius: 0.25rem;
+  background-color:white;
+  transform: rotate(-45deg);
 }
 
 @media screen and (min-width:1024px) {
-  .active#show-nav::before{
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: -40px;
-    width: 40px;
-    height: 4px;
-    margin: 9px 0px;
-    border-radius: 0.25rem;
-    background-color:white;
-    transform: rotate(45deg);
-  }
-
-  .active#show-nav::after{
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: -40px;
-    width: 40px;
-    height: 4px;
-    margin: 9px 0px;
-    border-radius: 0.25rem;
-    background-color:white;
-    transform: rotate(-45deg);
-  }
-
   #events-nav{
     animation: appear 250ms linear forwards;
   }
@@ -1170,27 +1178,6 @@ img{
       transform: translateX(0px);
     }
   }
-}
-
-#events-mobile-nav{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  padding: 32px;
-}
-
-#event-mobile-view{
-  background: rgba(239, 15, 235, 0.262);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  transition: all 1s linear;
-}
-
-#event-mobile-view  a{
-  width: 100%;
 }
 
 .down{
@@ -1233,6 +1220,10 @@ img{
     height: 24rem;
   }
 
+  .lg\:w-2\/4{
+    width: 50%;
+  }
+
   .lg\:w-52{
     width: 13rem;
   }
@@ -1247,10 +1238,6 @@ img{
 
   .lg\:basis-0{
     flex-basis: 0px;
-  }
-
-  .lg\:basis-2\/5{
-    flex-basis: 40%;
   }
 
   .lg\:flex-row{
